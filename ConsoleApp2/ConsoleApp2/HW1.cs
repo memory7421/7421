@@ -11,17 +11,45 @@ namespace ConsoleApp2
     }
 }
 
-class pink
+class person
 {
-
+    Action action();
 }
 
-class black
+class pink : person
 {
-
+    override Action action()
+    {
+        return true;
+    }
 }
 
-class blue
+class black : person
 {
+    override Action action()
+    {
+        return false;
+    }
+}
 
+class blue : person
+{
+    override Action action()
+    {
+        retuen true;
+    }
+    Action action(person a);
+}
+
+class yellow : person
+{
+    Action action()
+    {
+        retuen true;
+    }
+    if (action(person a)==false)
+    {
+        override Action action()
+        {
+            return false
 }
