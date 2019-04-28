@@ -32,21 +32,13 @@ class black : person
     }
 }
 
-class blue : person
+class blue : pink
 {
-    override Action action()
-    {
-        retuen true;
-    }
     Action action(person a);
 }
 
-class yellow : person
+class yellow : pink
 {
-    Action action()
-    {
-        retuen true;
-    }
     if (action(person a)==false)
     {
         override Action action()
