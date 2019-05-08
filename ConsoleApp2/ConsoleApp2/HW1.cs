@@ -11,37 +11,43 @@ namespace ConsoleApp2
     }
 }
 
-class person
+abstract class Person
 {
-    Action action();
+    public abstract bool Action();
 }
 
-class pink : person
+class Pink : Person
 {
-    override Action action()
+    public override bool Action()
     {
         return true;
     }
 }
 
-class black : person
+class Black : Person
 {
-    override Action action()
+    public override bool Action()
     {
         return false;
     }
 }
 
-class blue : pink
+class Blue : Pink
 {
-    Action action(person a);
+    public new bool Action()
+    {
+        return base.Action();
+    }
 }
 
-class yellow : pink
+class Yellow : Pink
 {
-    if (action(person a)==false)
+    public new bool Action()
     {
-        override Action action()
+        if (base.Action() == true)
         {
-            return false
+            return false;
+        }
+        return base.Action();
+    }
 }
