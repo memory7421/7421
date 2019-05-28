@@ -17,6 +17,8 @@ namespace ConsoleApp2
 
         public void Play(Player player1, Player player2)
         {
+            RandomEnemy randomEnemy = new RandomEnemy();
+            Console.WriteLine(randomEnemy);
             while (player1.HaveMoney() && player2.HaveMoney())
             {
                 PlayerAction action = GetAction(Console.ReadLine());
@@ -50,51 +52,13 @@ namespace ConsoleApp2
             }
         }
 
+       
+        
         #endregion
 
-        
+
     }
 
 
 }
 
-abstract class Person
-{
-    public abstract bool Action();
-}
-
-class Pink : Person
-{
-    public override bool Action()
-    {
-        return true;
-    }
-}
-
-class Black : Person
-{
-    public override bool Action()
-    {
-        return false;
-    }
-}
-
-class Blue : Pink
-{
-    public new bool Action()
-    {
-        return base.Action();
-    }
-}
-
-class Yellow : Pink
-{
-    public new bool Action()
-    {
-        if (base.Action() == true)
-        {
-            return false;
-        }
-        return base.Action();
-    }
-}
