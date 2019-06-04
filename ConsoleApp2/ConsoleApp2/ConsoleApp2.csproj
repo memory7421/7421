@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Enemy.cs" />
     <Compile Include="EnemyType.cs" />
+    <Compile Include="RandomEnemyType.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="HW1.cs" />
     <Compile Include="Player.cs" />

@@ -18,12 +18,15 @@ namespace ConsoleApp2
         public void Play(Player player1, Player player2)
         {
             RandomEnemy randomEnemy = new RandomEnemy();
+            //RandomEnemyType randomEnemyType = new RandomEnemyType(randomEnemy);
             Console.WriteLine(randomEnemy);
             while (player1.HaveMoney() && player2.HaveMoney())
             {
                 PlayerAction action = GetAction(Console.ReadLine());
+                //PlayerAction enemyAction = GetEnemyAction(PlayerAction enemyAction);
                 PlayersChoose player1Choose = new PlayersChoose(player1, action);
                 PlayersChoose player2Choose = new PlayersChoose(player2, PlayerAction.Deceive);
+                //PlayersChoose player2Choose = new PlayersChoose(player2, enemyAction);
                 Console.WriteLine(player1Choose + "," + player2Choose);
 
                 Game game = new Game(player1Choose, player2Choose);
@@ -51,9 +54,17 @@ namespace ConsoleApp2
                 default: throw new Exception();
             }
         }
-
-       
-        
+        /*
+        public PlayerAction GetEnemyAction(Enemy.EnemyType enemyType)
+        {
+            switch (enemyType)
+            {
+                case Enemy.EnemyType.Pink: return Pink.Action();
+                case Enemy.EnemyType.Black: return PlayerAction.;
+                default: throw new Exception();
+            }
+        }
+        */
         #endregion
 
 

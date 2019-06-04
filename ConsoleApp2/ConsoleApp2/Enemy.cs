@@ -8,24 +8,25 @@ namespace ConsoleApp2
 {
     class Enemy
     {
+        
         abstract class Person
         {
-            public abstract void Action(PlayerAction action);
+            public abstract PlayerAction Action();
         }
 
         class Pink : Person
         {
-            public override void Action(PlayerAction action)
+            public override PlayerAction Action()
             {
-                action = PlayerAction.Cooperation;
+                return PlayerAction.Cooperation;
             }
         }
         
         class Black : Person
         {
-            public override void Action(PlayerAction action)
+            public override PlayerAction Action()
             {
-                action = PlayerAction.Deceive;
+                return PlayerAction.Deceive;
             }
         }
         /*
@@ -49,5 +50,6 @@ namespace ConsoleApp2
             }
         }
         */
+        
     }
 }
